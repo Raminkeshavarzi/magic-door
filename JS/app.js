@@ -15,6 +15,7 @@ let numClosedDoor = 3;
 let openDoor1 ;
 let openDoor2 ; 
 let openDoor3 ;
+let currentPlaying = true;
 
 // Play door functions
 
@@ -62,36 +63,57 @@ const randomDoorGenerator = () => {
     }
 }
 
-
+// Event Listeners
 
 doorImage1.onclick = () => {
-    if (!isClicked(doorImage1)) {
+    if (!isClicked(doorImage1) && currentPlaying) {
         doorImage1.src = openDoor1;
         playDoor(door1)
     }
+
 }
 
 doorImage2.onclick = () => {
-    if (!isClicked(doorImage2)) {
+    if (!isClicked(doorImage2) && currentPlaying) {
         doorImage2.src = openDoor2;
         playDoor(door2)
     }
 }
 
 doorImage3.onclick = () => {
-    if (!isClicked(doorImage3)) {
+    if (!isClicked(doorImage3) && currentPlaying) {
         doorImage3.src = openDoor3;
         playDoor(door3)
     }
 }
 
+startButton.onclick = () => {
+    if(!currentPlaying){
+        startRound();
+    }   
+}
+
+
+// Start the round function
+const startRound = () => {
+    door1.src = closedDoorPath;
+    door2.src = closedDoorPath;
+    door3.src = closedDoorPath;
+    numClosedDoor = 3;
+    currentPlaying = true;
+    startRound.innerHTML = "Restart"
+    randomDoorGenerator();
+}
+
+// Game Over logic
 const gameOver = (status) => {
     if(status === 'win'){
         startButton.innerHTML = "You win, let's play again";
     } else {
         startButton.innerHTML = "Opps, Game Over!";
     }
+    currentPlaying = false;
 }
 
 // invoking the functions
-randomDoorGenerator();
+startRound();
