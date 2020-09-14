@@ -1,11 +1,14 @@
 body {
-    /* background: #000046;
-    background: -webkit-linear-gradient(to top, #1CB5E0, #000046);
-    background: linear-gradient(to top, #1CB5E0, #000046); */
+    background: linear-gradient(to top, #1CB5E0, #000046);
     margin: 0px;
 }
 
 /* Class */
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
 
 .header {
     text-align: center;
@@ -15,11 +18,14 @@ body {
     margin-top: 42px;
     margin-bottom: 21px;
     text-align: center;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 .instructions-title {
     display: inline;
-    font-size: 18px;
+    font-size: 28px;
     color: black;
     font-family: 'Work Sans';
 }
@@ -31,7 +37,7 @@ body {
 
 .door-row {
     width: 100%;
-    margin: 0 auto;
+    margin: 30px auto;
     display: flex;
     justify-content: center;
 }
@@ -39,6 +45,7 @@ body {
 .instructions-row {
     margin: 0 auto;
     width: 400px;
+    display: flex;
 }
 
 .instructions-number {
@@ -50,10 +57,16 @@ body {
 .instructions-text {
     padding: 10px;
     font-family: 'Work Sans';
-    font-size: 14px;
+    font-size: 20px;
 }
 
-.start-row {
+/* ID */
+
+#door1 {
+    cursor: pointer;
+}
+
+#start-row {
     margin: auto;
     width: 120px;
     height: 43px;
@@ -65,8 +78,11 @@ body {
     cursor: pointer;
 }
 
-/* ID */
 
-#door1 {
-    cursor: pointer;
+#start {
+    border: none;
+    padding: 4px;
+    background-color: wheat;
+    color: black;
+    font-size: 18px;
 }

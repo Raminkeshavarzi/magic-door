@@ -4,7 +4,6 @@ let doorImage2 = document.getElementById('door2');
 let doorImage3 = document.getElementById('door3');
 let startButton = document.getElementById('start');
 
-
 // images src
 let botDoorPath = 'https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg';
 let beachDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/beach.svg";
