@@ -2,7 +2,7 @@
 let doorImage1 = document.getElementById('door1');
 let doorImage2 = document.getElementById('door2');
 let doorImage3 = document.getElementById('door3');
- 
+let startButton = document.getElementById('start');
 
 
 // images src
@@ -18,6 +18,14 @@ let openDoor3 ;
 
 // Play door functions
 
+const isBot = (argument) => {
+    if (door.src === botDoorPath) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 const isClicked = (door) =>{
     if( door.src === closedDoorPath){
         return false
@@ -25,10 +33,11 @@ const isClicked = (door) =>{
         return true
     }
 }
+
 const playDoor = () => {
     numClosedDoor --;
     if(numClosedDoor === 0) {
-        gameOver();
+        gameOver('win');
     }
 }
 
@@ -51,6 +60,8 @@ const randomDoorGenerator = () => {
     }
 }
 
+
+
 doorImage1.onclick = () => {
     if (!isClicked(doorImage1)) {
         doorImage1.src = openDoor1;
@@ -72,7 +83,11 @@ doorImage3.onclick = () => {
     }
 }
 
-
+const gameOver = (status) => {
+    if(status === 'win'){
+        startButton.innerHTML = "You win, let's play again";
+    }
+}
 
 // invoking the functions
 randomDoorGenerator();
