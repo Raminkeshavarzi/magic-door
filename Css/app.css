@@ -1,0 +1,10 @@
+body {
+    /* background: #000046;
+    background: -webkit-linear-gradient(to top, #1CB5E0, #000046);
+    background: linear-gradient(to top, #1CB5E0, #000046); */
+    margin: 0px;
+}
+
+#door1 {
+    cursor: pointer;
+}
