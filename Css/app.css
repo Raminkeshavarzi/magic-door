@@ -53,6 +53,18 @@ body {
     font-size: 14px;
 }
 
+.start-row {
+    margin: auto;
+    width: 120px;
+    height: 43px;
+    font-family: 'Work Sans';
+    padding-top: 18px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 21px;
+    cursor: pointer;
+}
+
 /* ID */
 
 #door1 {
