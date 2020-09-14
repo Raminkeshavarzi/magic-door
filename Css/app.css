@@ -5,6 +5,15 @@ body {
     margin: 0px;
 }
 
+/* Class */
+
+.frame {
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* ID */
+
 #door1 {
     cursor: pointer;
 }
