@@ -16,10 +16,18 @@ let openDoor1 ;
 let openDoor2 ; 
 let openDoor3 ;
 
+// Play door functions
+
+const playDoor = () => {
+    numClosedDoor --;
+    if(numClosedDoor === 0) {
+        gameOver();
+    }
+}
+
 
 
 // random generator
-
 const randomDoorGenerator = () => {
     const choreDoor = Math.floor(Math.random() * numClosedDoor);
     if(choreDoor === 0){
@@ -39,14 +47,17 @@ const randomDoorGenerator = () => {
 
 doorImage1.onclick = () => {
     doorImage1.src = openDoor1;
+    playDoor();
 }
 
 doorImage2.onclick = () => {
     doorImage2.src = openDoor2;
+    playDoor();
 }
 
 doorImage3.onclick = () => {
     doorImage3.src = openDoor3;
+    playDoor();
 }
 
 // invoking the functions
