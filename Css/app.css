@@ -7,9 +7,20 @@ body {
 
 /* Class */
 
+.header {
+    text-align: center;
+}
+
 .frame {
     cursor: pointer;
     padding: 10px;
+}
+
+.door-row {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 /* ID */
