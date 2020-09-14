@@ -17,6 +17,13 @@ body {
     text-align: center;
 }
 
+.instructions-title {
+    display: inline;
+    font-size: 18px;
+    color: black;
+    font-family: 'Work Sans';
+}
+
 .frame {
     cursor: pointer;
     padding: 10px;
